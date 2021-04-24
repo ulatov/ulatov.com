@@ -3,37 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> | ulatov.com | still empty | </title>
+    <title>Aleksandr's home page</title>
     <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        :root {
+
+            /* https://coolors.co/3e78b2-004ba8-4a525a-24272b-07070a */
+            /* https://coolors.co/3e78b2-004ba8-dde0e3-24272b-07070a */
+
+            --bg-color: #07070a;
+            --text-color: #dde0e3;
+        }
+
         * {
+            box-sizing: border-box;
             margin:0;
             padding:0;
-            color:#F2F3AE;
-            line-height:2;
             text-align: center;
         }
-        div {
-            display:grid;
-            place-items:center;
+
+        body {
+            font-family: 'Roboto',sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
         }
-        #container {
-            height:100vh;
-            background-color:#020122;
+
+        footer {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
         }
-        #main {
-            background-color: #FF521B;
-            padding:10px;
-            border-radius:5px;
+        article {
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 90vh;
+            padding: 1rem;
+            justify-content: space-between;
         }
     </style>
 </head>
-<body>
-    <div id='container'>
-        <div id='main'>
+<body>  
+    <main>
+        <article>
             <h1>Hi there!</h1>
-            <p>There is nothing here yet</p>
-            <p>¯\_(ツ)_/¯</p>
-        </div>
-    </div>
+            <p>I'm Aleksandr, another one developer :D</p>
+            <p>I'm looking for a job as a web developer right now.</p>
+            <p>I will put a contact form here soon after i figure out how to do it :P</p>
+        </article>
+    </main>
+    <footer>
+        <p><small> ulatov.com | 2021 </small></p>
+    </footer>
 </body>
 </html>
