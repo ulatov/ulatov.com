@@ -1,7 +1,28 @@
+//<html lang="en" class="js touch">
+
 const elemBody = document.getElementsByTagName("body")[0]
+const elemCounter = document.getElementsByClassName("counter")[0]
+
+function is_touch_enabled() {
+    return ( 'ontouchstart' in window ) || 
+           ( navigator.maxTouchPoints > 0 ) || 
+           ( navigator.msMaxTouchPoints > 0 );
+}
+
+function counterString(counter) {
+  return `There ${counter === 0 ? "are no":counter === 1 ? "is" : "are"} ${counter === 0 ? "": counter} motley circle${counter === 1 ? "":"s"} on the page.`
+}
+
+function updateCounter() {
+  let counter = document.getElementsByClassName("circle").length;
+  elemCounter.innerHTML=counterString(counter)
+}
 
 function deleteElemTimeout(el) {
-  window.setTimeout(() => el.parentElement.removeChild(el), 3000)
+  window.setTimeout(() => {
+    el.parentElement.removeChild(el)
+    updateCounter()
+  }, 3000)
 }
 
 function makeCircle(x,y) {
@@ -18,4 +39,27 @@ function makeCircle(x,y) {
   deleteElemTimeout(newCircle)
 }
 
-elemBody.addEventListener("click", (e) => makeCircle(e.x, e.y))
+
+
+updateCounter()
+
+const toAdd = document.getElementsByClassName("toAdd")[0]
+
+if (is_touch_enabled()) {
+  toAdd.innerHTML = "Tap to add"
+  elemBody.addEventListener("touchstart", (e) => {
+    /*
+    for (let i=0; i < e.touches.length; i++) {
+      makeCircle(e.touches[i].clientX, e.touches[i].clientY)
+    }
+    */
+    makeCircle(e.touches[e.touches.length-1].clientX, e.touches[e.touches.length-1].clientY)
+    updateCounter()
+  })
+} else {
+  toAdd.innerHTML = "Click to add"
+  elemBody.addEventListener("click", (e) => {
+    makeCircle(e.x, e.y)
+    updateCounter()
+  })
+}
