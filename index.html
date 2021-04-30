@@ -1,104 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Aleksandr's home page</title>
+    <link rel="stylesheet" href="index.css">
     <script defer src="./index.js"></script>
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-        :root {
-
-            /* https://coolors.co/3e78b2-004ba8-4a525a-24272b-07070a */
-            /* https://coolors.co/3e78b2-004ba8-dde0e3-24272b-07070a */
-
-            --bg-color: #07070a;
-            --text-color: #dde0e3;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin:0;
-            padding:0;
-            text-align: center;
-        }
-
-        body {
-            font-family: 'Roboto',sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-
-        footer {
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
-            width: 100%;
-        }
-        article {
-            display: flex;
-            flex-direction: column;
-            width: 100vw;
-            height: 90vh;
-            padding: 1rem;
-            justify-content: space-between;
-        }
-        .circle {
-            position: fixed;
-            width: 100vmax;
-            height: 100vmax;
-            z-index: -1;
-            border-radius: 50%;
-            animation-name: example;
-            animation-duration: 1.5s;
-            animation-iteration-count: 2;
-            animation-timing-function: ease-in-out;
-            animation-direction: alternate;
-        }
-
-        @keyframes example {
-            from {
-                transform: translate(-50%, -50%) scale(0);
-            }
-            to {
-                transform: translate(-50%, -50%) scale(1);
-            }
-        }
-    </style>
 </head>
 <body>
     <main>
         <article>
             <h1>Hi there!</h1>
             <p>I'm Aleksandr, another one developer :D</p>
+            <p class="counter"></p>
+            <p class="toAdd">no JS</p>
+            <p>¯\_(ツ)_/¯</p>
             <p>I'm looking for a job as a web developer.</p>
             <p>
-                <a href="https://www.linkedin.com/in/ulatov/">
-                    <svg width="24px" height="24px" style="background-color: white;" viewBox="0 0 24 24">
-                        <path
-                            d="M 5 3 C 3.895 3 3 3.895 3 5 L 3 19 C 3 20.105 3.895 21 5 21 
+                <a href="https://www.linkedin.com/in/ulatov/" target="_blank" rel="noopener">
+                    <svg width="48px" height="48px" style="fill: tomato;" viewBox="0 0 24 24">
+                        <path d="
+                            M 5 3 C 3.895 3 3 3.895 3 5 L 3 19 C 3 20.105 3.895 21 5 21 
                             L 19 21 C 20.105 21 21 20.105 21 19 L 21 5 C 21 3.895 20.105 3 19 3
-                            L 5 3 z M 5 5 L 19 5 L 19 19 L 5 19 L 5 5 z 
-                            M 7.7792969 6.3164062 C 6.9222969 6.3164062 6.4082031 6.8315781 6.4082031 7.5175781 
-                            C 6.4082031 8.2035781 6.9223594 8.7167969 7.6933594 8.7167969 
-                            C 8.5503594 8.7167969 9.0644531 8.2035781 9.0644531 7.5175781 
-                            C 9.0644531 6.8315781 8.5502969 6.3164062 7.7792969 6.3164062 z 
-                            M 6.4765625 10 L 6.4765625 17 L 9 17 L 9 10 L 6.4765625 10 z 
-                            M 11.082031 10 L 11.082031 17 L 13.605469 17 L 13.605469 13.173828 
-                            C 13.605469 12.034828 14.418109 11.871094 14.662109 11.871094 
-                            C 14.906109 11.871094 15.558594 12.115828 15.558594 13.173828 
-                            L 15.558594 17 L 18 17 L 18 13.173828 C 18 10.976828 17.023734 10 15.802734 10 
-                            C 14.581734 10 13.930469 10.406562 13.605469 10.976562 L 13.605469 10 L 11.082031 10 z">
-                        </path>
+                            L 5 3 z M 5 5 L 19 5 L 19 19 L 5 19 L 5 5 z M 7.779 6.316
+                            C 6.922 6.316 6.408 6.831 6.408 7.517 C 6.408 8.203 6.922 8.716 7.693 8.716 
+                            C 8.550 8.716 9.064 8.203 9.064 7.517 C 9.064 6.831 8.550 6.316 7.779 6.316 z 
+                            M 6.476 10 L 6.476 17 L 9 17 L 9 10 L 6.476 10 z 
+                            M 11.082 10 L 11.082 17 L 13.605 17 L 13.605 13.173 
+                            C 13.605 12.034 14.418 11.871 14.662 11.871 
+                            C 14.906 11.871 15.558 12.115 15.558 13.173 
+                            L 15.558 17 L 18 17 L 18 13.173 C 18 10.976 17.023 10 15.802 10 
+                            C 14.581 10 13.930 10.406 13.605 10.976 L 13.605 10 L 11.082 10 z
+                        "></path>
                     </svg>
                 </a>
             </p>
-            <p>¯\_(ツ)_/¯</p>
-            <p class="counter"></p>
-            <p class="toAdd">no JS</p>
         </article>
     </main>
     <footer>

@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  /* https://coolors.co/3e78b2-004ba8-4a525a-24272b-07070a */
+  /* https://coolors.co/3e78b2-004ba8-dde0e3-24272b-07070a */
+
+  --bg-color: #07070a;
+  --text-color: #dde0e3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 90vh;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.circle {
+  position: fixed;
+  width: 100vmax;
+  height: 100vmax;
+  z-index: -1;
+  border-radius: 100vmax;
+  animation-name: inflate;
+  animation-duration: 1.5s;
+  animation-iteration-count: 2;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes inflate {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
